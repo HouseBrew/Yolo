@@ -1,0 +1,144 @@
+@import '../main.styl'
+$pad = 10px
+
+.vi-input
+  display flex
+  padding 0 $pad
+  align-items center
+  border 1px solid $border-color
+  background-color: white;
+  background-image: none;
+  font-size: 14px;
+  color: $dark-grey;
+  border-radius: $border-radius;
+  transition: $transition;
+  outline none
+  min-height 40px
+
+  &--valid
+
+    .vi-input__suffix-icon
+      color $brand !important
+
+  &--line
+    border-top none
+    border-left none
+    border-right none
+    border-radius 0
+    padding 0
+    background transparent
+
+    .vi-input__inner
+      padding 5px 0
+
+  &--darker
+    border-color $dark-border-color
+
+  &:hover, &--focused
+    border-color $grey-3
+
+    &.vi-input--darker
+      border-color $grey-4
+
+  &--focused
+    &:not(.vi-input--line)
+      box-shadow 0 0 6px 0 rgba(0,0,0,0.15)
+
+    .vi-input__prefix, .vi-input__suffix
+      .vi-icon
+        color $dark-grey
+
+  &--selected
+    .vi-input__prefix, .vi-input__suffix
+      .vi-icon
+        color $dark-grey
+
+  &--clickable
+    input
+      cursor pointer
+
+  &--disabled
+    background $grey-2 !important
+    border-color $dark-border-color !important
+    color $light-grey !important
+
+    input
+      color $light-grey
+      cursor no-drop
+
+  &--readonly:not(.vi-input--clickable)
+    border-color $border-color // TODO verify without !important // override hover color change
+    color $light-grey !important
+    box-shadow none !important
+
+    &.vi-input--darker
+      border-color $dark-border-color !important
+
+    input
+      cursor no-drop
+
+  &--error
+    border-color $error-color !important
+
+  &--select
+    // align with the height of the chip (otherwise will have extra 'top margin')
+    .vi-input__inner
+      height 28px
+
+  &__prefix, &__suffix
+    display inline-flex
+
+    > .vi-icon
+      color $light-grey
+
+  &__prefix
+    margin-right $pad
+
+  &__suffix
+    margin-left $pad
+
+    .vi-icon__clear
+      margin-right -10px
+
+  &--no-resize
+    textarea
+      resize none
+
+  &__inner
+    display block
+    resize vertical
+    padding 9px 0
+    box-sizing border-box
+    width 100%
+    border-radius inherit
+    font-size inherit
+    color $dark-grey
+    border none
+    background none
+    outline none
+    font-family 'Lato', sans-serif
+    min-width 0
+    flex 1
+
+    &::placeholder
+      color: $light-grey
+
+    &--textarea
+      height inherit
+      padding 9px 0
+      line-height 28px
+
+  &__selection
+    display flex
+    flex-wrap wrap
+    width 100%
+    align-items center
+    // max 3 row of tags
+    // TODO any way to position the scroll bar more nicely?
+    max-height 108px
+    overflow-y auto
+
+.vi-input-label
+  font-size 16px
+  font-weight bold
+  line-height 1
