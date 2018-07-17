@@ -64,5 +64,5 @@
       height: inherit
       width: inherit
       background-size cover
-      border: 2px solid $dark-border-color // deprecated
+
 </style>

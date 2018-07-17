@@ -15,10 +15,8 @@ import {ViExpandTransition} from './components/transitions'
 import ViTooltip from './components/vi-tooltip'
 import {ViSpacer, ViContainer, ViCol, ViRow, ViDivider} from './components/vi-grid'
 import ViYearMonthDaySelect from './components/vi-year-month-day-select'
-import {ViDataTable, ViTableCol} from './components/vi-data-table'
+// import {ViDataTable, ViTableCol} from './components/vi-data-table'
 import ViMessage from './components/vi-message/vi-message.vue'
-// import ViMessageBox from './components/vi-message-box'
-// import ViDeletePrompt from './components/vi-delete-prompt'
 import ViSwitch from './components/vi-switch'
 import ViSidebar from './components/vi-sidebar'
 import ViSpinner from './components/vi-spinner'
@@ -28,7 +26,6 @@ import {ViCard, ViCardContent} from './components/vi-card'
 import {ViDialog, ViDialogTitle} from './components/vi-dialog'
 import ViTimepicker from './components/vi-timepicker'
 import ViDatePicker from './components/vi-date-picker'
-import Timepicker from './components/timepicker'
 import Sticky from './directives/sticky'
 import Scroll from './directives/scroll'
 import LoadingDots from './directives/loading-dots'
@@ -47,9 +44,9 @@ const Yolo = {
     Vue.component('vi-card-content', ViCardContent)
     Vue.component('vi-container', ViContainer)
     Vue.component('vi-checkbox', ViCheckbox)
-    Vue.component('vi-data-table', ViDataTable)
+    // Vue.component('vi-data-table', ViDataTable)
+    // Vue.component('vi-table-col', ViTableCol)
     Vue.component('vi-date-picker', ViDatePicker)
-    Vue.component('vi-table-col', ViTableCol)
     Vue.component('vi-icon', ViIcon)
     Vue.component('vi-input', ViInput)
     Vue.component('vi-input-error', ViInputError)

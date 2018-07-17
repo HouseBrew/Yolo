@@ -1,4 +1,4 @@
-import styles from '../stylus/components/_overlay.styl' // eslint-disable-line no-unused-vars
+// import styles from '../stylus/components/_overlay.styl' // eslint-disable-line no-unused-vars
 
 export default {
   data () {

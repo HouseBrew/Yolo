@@ -1,4 +1,4 @@
-import '../../stylus/components/_tooltips.styl'
+// import '../../stylus/components/_tooltips.styl'
 
 // Mixins
 // import Colorable from '../../mixins/colorable'

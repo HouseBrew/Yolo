@@ -23,12 +23,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at blanditiis 
 </template>
 
 <script>
-  import virtualList from 'vue-virtual-scroll-list'
   export default {
     name: 'data-table-doc',
-    components: {
-      'virtual-list': virtualList
-    },
     data () {
       return {
         pagination: {},
