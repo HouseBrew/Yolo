@@ -1,3 +1,5 @@
+// eslint-disable-line no-unused-vars
+import '../../stylus/app.styl'
 export default {
   name: 'vi-app',
 

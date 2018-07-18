@@ -1,2 +1,2 @@
 import ViExpansionPanel from './vi-expansion-panel'
-export {ViExpansionPanel}
+export default ViExpansionPanel
