@@ -57,6 +57,8 @@ export function getObjectValueByPath (obj, path) {
 }
 
 export function isMobileFactory () {
+  if (typeof window === 'undefined') return false
+
   const testExp = new RegExp('Android|webOS|iPhone|iPad|' +
     'BlackBerry|Windows Phone|'  +
     'Opera Mini|IEMobile|Mobile' ,
