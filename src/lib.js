@@ -1,16 +1,16 @@
 import ViApp from './components/vi-app'
-import {ViAvatar, ViAvatarChip} from './components/vi-avatar'
+import ViAvatar from './components/vi-avatar'
 import ViChip from './components/vi-chip'
 import ViCheckbox from './components/vi-checkbox'
 import ViDrawer from './components/vi-drawer'
 import ViIcon from './components/vi-icon'
 import {ViInput, ViInputError, ViInputLabel} from './components/vi-input'
-import {ViButton, ViButtonRow, ViCloseButton} from './components/vi-button'
+import ViButton from './components/vi-button'
 import {ViItem, ViItemAction, ViItemAvatar, ViItemContent, ViItemTitle, ViItemSubTitle} from './components/vi-item'
 import {ViSectionHeader, ViPageTitle} from './components/vi-section-header'
 import ViMenu from './components/vi-menu'
 import ViSelect from './components/vi-select'
-import {ViExpansionPanel} from './components/vi-expansion-panel'
+import ViExpansionPanel from './components/vi-expansion-panel'
 import {ViExpandTransition} from './components/transitions'
 import ViTooltip from './components/vi-tooltip'
 import {ViSpacer, ViContainer, ViCol, ViRow, ViDivider} from './components/vi-grid'
@@ -36,7 +36,6 @@ const Yolo = {
     Vue.component('vi-app', ViApp)
     Vue.component('vi-expand-transition', ViExpandTransition)
     Vue.component('vi-avatar', ViAvatar)
-    Vue.component('vi-avatar-chip', ViAvatarChip)
     Vue.component('vi-chip', ViChip)
     Vue.component('vi-card', ViCard)
     Vue.component('vi-card-content', ViCardContent)
@@ -51,8 +50,6 @@ const Yolo = {
     Vue.component('vi-input-error', ViInputError)
     Vue.component('vi-input-label', ViInputLabel)
     Vue.component('vi-button', ViButton)
-    Vue.component('vi-button-row', ViButtonRow)
-    Vue.component('vi-close-button', ViCloseButton)
     Vue.component('vi-section-header', ViSectionHeader)
     Vue.component('vi-menu', ViMenu)
     Vue.component('vi-message', ViMessage)
