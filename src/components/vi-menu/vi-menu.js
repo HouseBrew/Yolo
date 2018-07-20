@@ -1,5 +1,3 @@
-import '../../stylus/components/_menus.styl'
-
 import Delayable from '../../mixins/delayable'
 import Toggleable from '../../mixins/toggleable'
 import Detachable from '../../mixins/detachable'

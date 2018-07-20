@@ -45,24 +45,3 @@
     }
   }
 </script>
-
-<style lang="stylus">
-  @import '../../stylus/main.styl'
-  .vi-avatar
-    align-items: center
-    border-radius: 50%
-    display: inline-flex
-    justify-content: center
-    position: relative
-    text-align: center
-    vertical-align: middle
-
-    img,
-    .vi-avatar__img,
-    .vi-icon
-      border-radius: 50%
-      height: inherit
-      width: inherit
-      background-size cover
-
-</style>

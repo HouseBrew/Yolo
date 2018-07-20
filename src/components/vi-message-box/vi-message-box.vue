@@ -47,11 +47,3 @@
     }
   }
 </script>
-
-<style lang="stylus" scoped>
-  .vi-item__title + .vi-item__sub-title
-    padding-top 8px
-
-  .vi-button
-    min-width 135px
-</style>

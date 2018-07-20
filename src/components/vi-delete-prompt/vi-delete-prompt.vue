@@ -70,14 +70,3 @@
     }
   }
 </script>
-
-<style lang="stylus">
-  .vi-delete-prompt
-
-    .center-text
-      text-align center
-      font-size 14px
-
-    .vi-input__inner
-      text-align center
-</style>

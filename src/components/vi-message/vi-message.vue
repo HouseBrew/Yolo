@@ -83,7 +83,7 @@
 </script>
 
 <style lang="stylus">
-  @import '../../stylus/main.styl'
+  @import '../../stylus/settings.styl'
   .vi-message
     flex-row 40px 20px
     background $dark-grey

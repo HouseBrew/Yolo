@@ -28,7 +28,7 @@
 </script>
 
 <style lang="stylus">
-  @import '../../stylus/main.styl'
+  @import '../../stylus/settings.styl'
 
   // only directly after vi-input should we add the top padding space
   .vi-input + .vi-input-errors
