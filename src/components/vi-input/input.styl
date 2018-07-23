@@ -1,12 +1,18 @@
 @import '../../stylus/settings.styl'
-$input-padding-x = $el-padding-x
-$input-height = $el-height
+$input-padding-x := $el-padding-x
+$input-height := $el-height
+
+$input-border-color := $border-color-1
+$input-border-color-hover := $border-color-2
+
+$input-dark-border-color := $border-color-2
+$input-dark-border-color-hover := $border-color-3
 
 .vi-input
   display flex
   padding 0 $input-padding-x
   align-items center
-  border 1px solid $border-color
+  border 1px solid $input-border-color
   background-color: white;
   background-image: none;
   font-size: 14px;
@@ -33,13 +39,13 @@ $input-height = $el-height
       padding 5px 0
 
   &--darker
-    border-color $dark-border-color
+    border-color $input-dark-border-color
 
   &:hover, &--focused
-    border-color $grey-3
+    border-color $input-border-color-hover
 
     &.vi-input--darker
-      border-color $grey-4
+      border-color $input-dark-border-color-hover
 
   &--focused
     &:not(.vi-input--line)
