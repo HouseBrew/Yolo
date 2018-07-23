@@ -1,12 +1,18 @@
 @import '../../stylus/settings.styl'
 
+$chip-bg-color := $bg-color
+$chip-height := $el-height * 0.8
+$chip-height-sm := $el-height-sm * 0.8
+$chip-height-lg := $el-height-lg * 0.8
+$chip-outline-border := $border-color-2
+
 .vi-chip
   display inline-flex
-  background #f9f9f9
+  background $chip-bg-color
   color $mild-grey
   line-height 1
   font-size 14px
-  height 28px
+  height $chip-height
   align-items center
   padding 0 8px
   border-radius $border-radius
@@ -16,13 +22,22 @@
   &--select-multi
     margin 4px 4px 4px 0
 
-  .vi-avatar
+  >.vi-chip__content > .vi-avatar
     width 20px !important
     height 20px !important
     margin-right 4px
 
     img
       border none !important
+
+  >.vi-chip__content > .vi-icon
+    margin-right 6px
+    width 10px
+    height 10px
+
+    &--right
+      margin-right 0
+      margin-left 4px
 
   &__content
     display flex
@@ -54,31 +69,38 @@
   &__clear
     position absolute
     right 6px
-    top 9px
+    top 0
     bottom 0
-    width 10px
-    height 10px
     color $light-grey
     cursor pointer
+    display flex
+    align-items center
 
-    &:hover
-      color $dark-grey
+    .vi-icon
+      width 10px
+      height 10px
+
+      &:hover
+        color $dark-grey
 
   &--small
     font-size 12px
-    height 16px
+    height $chip-height-sm
+
+    >.vi-chip__content > .vi-icon
+      margin-right 4px
 
   &--large
     font-size 14px
-    height 40px
+    height $chip-height-lg
 
     .vi--select-multi
       margin 5px 8px 5px 0
 
-    .vi-chip__clear
-      top 14px
+    >.vi-chip__content > .vi-icon
+      margin-right 8px
 
-    .vi-avatar
+    >.vi-chip__content > .vi-avatar
       width 30px !important
       height 30px !important
 
@@ -94,16 +116,7 @@
 
   &--outline
     background white
-    border 1px solid $border-color
+    border 1px solid $chip-outline-border
     color $dark-grey
     displat inline-flex
     align-items center
-
-  .vi-icon
-    margin-right 4px
-    width 10px
-    height 10px
-
-    &--right
-      margin-right 0
-      margin-left 4px

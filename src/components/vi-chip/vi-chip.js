@@ -19,7 +19,6 @@ export default {
     }, this.$slots.default))
     if (this.removable) {
       const icon = h('vi-icon', {
-        staticClass: 'vi-chip__clear',
         nativeOn: {
           click: e => {
             e.stopPropagation()
@@ -30,7 +29,9 @@ export default {
           name: 'clear'
         }
       })
-      children.push(icon)
+      children.push(h('div', {
+        staticClass: 'vi-chip__clear'
+      }, [icon]))
     }
 
     if (this.prepend) {
