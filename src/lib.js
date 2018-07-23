@@ -28,7 +28,7 @@ import Sticky from './directives/sticky'
 import Scroll from './directives/scroll'
 import LoadingDots from './directives/loading-dots'
 
-import './stylus/app.styl'
+// import './stylus/app.styl'
 import './components/vi-icon/collection'
 
 const Yolo = {

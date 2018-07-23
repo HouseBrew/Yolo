@@ -24,6 +24,7 @@
       flat: Boolean,
       lowercase: Boolean,
       large: Boolean,
+      small: Boolean,
       minWidth: String,
       size: [String, Number],
       primary: Boolean,
@@ -49,6 +50,7 @@
           'vi-button--active': this.active,
           'vi-button--lowercase': this.lowercase,
           'vi-button--large': this.large,
+          'vi-button--small': this.small,
           'vi-button--icon': this.icon,
           ['vi-button--' + this._color]: !!this._color,
         }

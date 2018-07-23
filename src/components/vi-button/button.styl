@@ -1,12 +1,15 @@
 @import '../../stylus/settings.styl'
 
-$button-height := 30px
+$button-size-sm := $el-height-sm
+$button-size-lg := $el-height-lg
+$button-size := $el-height
+$button-padding-x := $el-padding-x
 
 .vi-button
   align-items: center
   border-radius: $border-radius
   display: inline-flex
-  height: $button-height
+  height: $button-size
   flex: 0 1 auto
   font-size: 14px
   font-weight: 400
@@ -49,7 +52,7 @@ $button-height := 30px
     flex: 1 0 auto
     justify-content: center
     margin: 0 auto
-    padding: 0 10px
+    padding: 0 $button-padding-x
     // transition: $transition
     white-space: nowrap
     width: inherit
@@ -73,14 +76,6 @@ $button-height := 30px
         &:hover
           background-color lighten(color_value, 15%)
           border-color lighten(color_value, 15%)
-
-      &.vi-button--brand-gradient
-        background-image $brand-gradient
-        border none
-
-        &--active,
-        &:hover
-          background-image $brand-gradient-reverse
 
   &--outline
     background none
@@ -151,13 +146,21 @@ $button-height := 30px
       color $dark-grey
       background rgba(0, 0, 0, 0.05)
 
-  &--large
-    height 45px
-    font-size 18px
+  &--small
+    height $button-size-sm
+    font-size 12px
 
     &.vi-button--icon
-      width: 45px
-      height: 45px
+      width: $button-size-sm
+      height: @width
+
+  &--large
+    height $button-size-lg
+    font-size 16px
+
+    &.vi-button--icon
+      width: $button-size-lg
+      height: @width
 
   &--round
     border-radius 500em

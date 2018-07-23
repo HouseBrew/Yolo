@@ -1,9 +1,10 @@
 @import '../../stylus/settings.styl'
-$pad = 10px
+$input-padding-x = $el-padding-x
+$input-height = $el-height
 
 .vi-input
   display flex
-  padding 0 $pad
+  padding 0 $input-padding-x
   align-items center
   border 1px solid $border-color
   background-color: white;
@@ -13,7 +14,7 @@ $pad = 10px
   border-radius: $border-radius;
   transition: $transition;
   outline none
-  min-height 40px
+  min-height $input-height
 
   &--valid
 
@@ -92,10 +93,10 @@ $pad = 10px
       color $light-grey
 
   &__prefix
-    margin-right $pad
+    margin-right $input-padding-x
 
   &__suffix
-    margin-left $pad
+    margin-left $input-padding-x
 
     .vi-icon__clear
       margin-right -10px
