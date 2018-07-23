@@ -28,7 +28,7 @@ $button-padding-x := $el-padding-x
   font-family 'Lato', sans-serif
   // default
   background none
-  color $mild-grey
+  color $grey
   border 1px solid currentColor
 
   &--active,
@@ -37,8 +37,8 @@ $button-padding-x := $el-padding-x
     color $dark-grey
 
   &--disabled
-    background $grey-2 !important
-    border-color $grey-2 !important
+    background $disable-bg-color !important
+    border-color $disable-bg-color !important
     color white !important
     cursor default
     box-shadow none !important
@@ -93,7 +93,7 @@ $button-padding-x := $el-padding-x
         if color_name == light-grey
           &.vi-button--active,
           &:hover
-            color $mild-grey
+            color $grey
 
         else if color_name == 'grey'
           &.vi-button--active,

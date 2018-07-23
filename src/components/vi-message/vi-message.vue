@@ -79,30 +79,5 @@
       })
       this.startTimer()
     }
-  };
+  }
 </script>
-
-<style lang="stylus">
-  @import '../../stylus/settings.styl'
-  .vi-message
-    flex-row 40px 20px
-    background $dark-grey
-    color white
-    text-align center
-    border-radius $border-radius
-    box-shadow $shadow
-    max-width 500px
-    position fixed
-    margin 0 auto
-    top 80px
-    left 50%
-    z-index 9999
-
-    &__icon
-      margin-right 8px
-      margin-top 3px
-
-    &--warning
-      background $brand-gradient
-      color white
-</style>

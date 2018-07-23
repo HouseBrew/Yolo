@@ -35,7 +35,7 @@
     padding-top 6px
 
   .vi-input-error
-    color $brand
+    color $error-color
     font-size 14px
     padding-left 16px
     position relative
@@ -58,13 +58,13 @@
         height 10px
 
     &--error
-      color $brand
+      color $error-color
 
     &--satisfied
       color $light-grey
 
     &--unsatisfied
-      color $brand
+      color $error-color
 
       .vi-icon
         width 6px
