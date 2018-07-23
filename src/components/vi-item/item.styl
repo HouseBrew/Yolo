@@ -1,6 +1,7 @@
 @import '../../stylus/settings.styl'
 
 $width = 40px // the width of the avatar and action column
+$item-link-bg := $bg-color
 
 .vi-item
   align-items: center
@@ -19,12 +20,6 @@ $width = 40px // the width of the avatar and action column
     text-decoration inherit
     color inherit
 
-  &--avatar
-    height 70px
-
-    .vi-item__avatar
-      width 70px
-
   &--disabled
     pointer-events none
     cursor default
@@ -35,7 +30,7 @@ $width = 40px // the width of the avatar and action column
     padding: 0 16px
 
     &:hover
-      background $grey-2
+      background $item-link-bg
 
   &--menu-link
     cursor pointer
@@ -52,7 +47,7 @@ $width = 40px // the width of the avatar and action column
     padding: 0 16px
 
     &:hover
-      background $grey-2
+      background $item-link-bg
 
     &-no-style
       &:hover

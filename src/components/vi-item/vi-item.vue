@@ -17,7 +17,6 @@
       divided: {
         default: false
       },
-      avatar: Boolean,
       selectable: Boolean, // DEPRECATED - use link
       menuLink: Boolean, // DEPRECATED - use link='menu'
       link: {
@@ -34,7 +33,6 @@
       classes () {
         const classes = {
           'vi-item--icon': this.icon,
-          'vi-item--avatar': this.avatar,
           'vi-item--link': this.link,
           'vi-item--active': this.active,
           'vi-item--divided': this.divided,
