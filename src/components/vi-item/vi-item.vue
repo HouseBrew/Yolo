@@ -17,8 +17,6 @@
       divided: {
         default: false
       },
-      selectable: Boolean, // DEPRECATED - use link
-      menuLink: Boolean, // DEPRECATED - use link='menu'
       link: {
         type: [Boolean, String],
         default: false

@@ -36,6 +36,7 @@
         }
       },
       styles () {
+        if (this.size === 50) return false
         return {
           'width': `${this.size}px`,
           'height': `${this.size}px`

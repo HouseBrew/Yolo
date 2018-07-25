@@ -58,7 +58,10 @@
       left: Boolean,
       right: Boolean,
       color: String,
-      size: [String, Number]
+      size: {
+        type: [String, Number],
+        default: 22
+      }
     },
     data () {
       return {
@@ -120,11 +123,10 @@
         return this.size || this.childrenHeight || this.icon && this.icon.height / this.ratio * this.normalizedScale || 0
       },
       style () {
-        if (this.normalizedScale === 1) {
-          return false
-        }
+        if (this.size === 22) return false
         return {
-          fontSize: this.normalizedScale + 'em'
+          width: this.width + 'px',
+          height: this.height + 'px'
         }
       },
       raw () {

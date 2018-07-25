@@ -2,14 +2,37 @@ export default {
   name: 'vi-chip',
 
   props: {
-    removable: Boolean,
-    prepend: String,
-    small: Boolean,
-    large: Boolean,
-    outline: Boolean,
-    text: Boolean,
-    color: String,
-    error: Boolean
+    removable: {
+      type: Boolean,
+      default: false
+    },
+    prepend: {
+      type: String
+    },
+    small: {
+      type: Boolean,
+      default: false
+    },
+    large: {
+      type: Boolean,
+      default: false
+    },
+    outline: {
+      type: Boolean,
+      default: false
+    },
+    text: {
+      type: Boolean,
+      default: false
+    },
+    color: {
+      type: String,
+      default: false
+    },
+    error: {
+      type: Boolean,
+      default: false
+    }
   },
 
   render (h) {
