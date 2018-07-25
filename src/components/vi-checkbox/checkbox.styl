@@ -1,38 +1,33 @@
 @import '../../stylus/settings.styl'
 
 .vi-checkbox
-  display flex
-  align-items center
+  display block
+  user-select none
+  font-size 14px
 
-  &__inlineflex
+  &--inline
+    display inline
+    &:not(:first-child)
+      margin-left 16px
+
+  &--disabled
+    cursor no-drop
+    opacity 0.3
+
+  &--active
+    color $brand
+
+  &__main
+    cursor pointer
     display inline-flex
-    margin-right 10px
+    align-items center
 
-.vi-checkbox__icon
-  display block !important
-  margin auto
+    .vi-checkbox--disabled &
+      cursor no-drop
 
-.vi-checkbox__icon.vi-checkbox--empty
-  color $light-grey
+  &__label
+    margin-left 8px
 
-.vi-checkbox__icon.vi-checkbox--checked
-  color $brand
-
-.vi-checkbox__iconContainer
-  display inline
-  cursor pointer
-
-.vi-checkbox__label
-  display inline
-  margin-left 10px
-  cursor pointer
-
-.vi-checkbox--disabled
-  pointer-events none
-  color #e5e5e5 !important
-
-.vi-checkbox-swap--disabled
-  color $light-grey
-
-.vi-checkbox__text--brandLabel
-  color $brand
+  &__icon
+    width 18px
+    height @width
