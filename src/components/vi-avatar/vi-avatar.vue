@@ -1,10 +1,8 @@
 <template>
-  <div class="vi-avatar"
-       :style="styles">
-    <div class="vi-avatar__img"
-         v-if="src"
-         :style="innerImageStyle"></div>
-    <slot></slot>
+  <div class="vi-avatar" :style="styles" :class="classes">
+    <div v-if="border && !color" class="vi-avatar__border"></div>
+    <div class="vi-avatar__img" v-if="src" :style="{'background-image': `url(${this.src})`}"></div>
+    <slot v-else></slot>
   </div>
 </template>
 
@@ -14,33 +12,34 @@
 
     props: {
       size: {
+        type: Number | String,
         default: 50
       },
       border: {
+        type: Boolean,
         default: true
       },
-      src: ''
+      src: {
+        type: String,
+        required: false
+      },
+      color: {
+        type: String,
+        required: false
+      }
     },
 
     computed: {
-
+      classes () {
+        return {
+          [`vi-avatar--${this.color}`]: this.color
+        }
+      },
       styles () {
         return {
           'width': `${this.size}px`,
           'height': `${this.size}px`
         }
-      },
-
-      innerImageStyle () {
-        if (!this.src) return
-        const styles = {
-          'background-image': `url(${this.src})`
-        }
-        if (this.border) {
-          const borderWidth = typeof this.border === 'number' ? this.border : 1
-          styles.border = `${borderWidth}px solid #adadad`
-        }
-        return styles
       }
     }
   }

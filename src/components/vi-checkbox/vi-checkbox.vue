@@ -21,7 +21,8 @@
       },
       inline: {
         type: Boolean,
-        required: false
+        required: false,
+        default: false
       },
       disabled: {
         type: Boolean,
