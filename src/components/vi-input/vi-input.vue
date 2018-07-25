@@ -10,7 +10,9 @@
       'vi-input--line': line,
       'vi-input--darker': darker,
       'vi-input--no-resize': noResize,
-      'vi-input--valid': valid
+      'vi-input--valid': valid,
+      'vi-input--prepend': $slots.prepend,
+      'vi-input--append': $slots.append
     }
     ]"
        @mouseenter="hovering = true"

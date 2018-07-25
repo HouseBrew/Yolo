@@ -16,14 +16,13 @@ $input-dark-border-color-hover := $border-color-3
   background-color: white;
   background-image: none;
   font-size: 14px;
-  color: $dark-grey;
+  color: $font-color
   border-radius: $border-radius;
   transition: $transition;
   outline none
   min-height $input-height
 
   &--valid
-
     .vi-input__suffix-icon
       color $brand !important
 
@@ -49,16 +48,16 @@ $input-dark-border-color-hover := $border-color-3
 
   &--focused
     &:not(.vi-input--line)
-      box-shadow 0 0 6px 0 rgba(0,0,0,0.15)
+      box-shadow $box-shadow
 
     .vi-input__prefix, .vi-input__suffix
       .vi-icon
-        color $dark-grey
+        color $font-color-2
 
   &--selected
     .vi-input__prefix, .vi-input__suffix
       .vi-icon
-        color $dark-grey
+        color $font-color-2
 
   &--clickable
     input
@@ -67,10 +66,10 @@ $input-dark-border-color-hover := $border-color-3
   &--disabled
     background $disable-bg-color !important
     border-color $border-color-2 !important
-    color $light-grey !important
+    color $font-color-1 !important
 
     input
-      color $light-grey
+      color $font-color-1
       cursor no-drop
 
   &--readonly:not(.vi-input--clickable)
@@ -92,11 +91,17 @@ $input-dark-border-color-hover := $border-color-3
     .vi-input__inner
       height 28px
 
+  &--prepend
+    padding-left 0
+
+    .vi-input__inner
+      padding-left $el-padding-x
+
   &__prefix, &__suffix
     display inline-flex
 
     > .vi-icon
-      color $light-grey
+      color $font-color-1
 
   &__prefix
     margin-right $input-padding-x
@@ -119,7 +124,7 @@ $input-dark-border-color-hover := $border-color-3
     width 100%
     border-radius inherit
     font-size inherit
-    color $dark-grey
+    color $font-color
     border none
     background none
     outline none
@@ -128,7 +133,7 @@ $input-dark-border-color-hover := $border-color-3
     flex 1
 
     &::placeholder
-      color: $light-grey
+      color: $font-color-1
 
     &--textarea
       height inherit
