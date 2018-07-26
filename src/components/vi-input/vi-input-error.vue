@@ -61,7 +61,7 @@
       color $error-color
 
     &--satisfied
-      color $light-grey
+      color $font-color-1
 
     &--unsatisfied
       color $error-color

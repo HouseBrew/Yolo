@@ -1,15 +1,15 @@
 @import '../../stylus/settings.styl'
 
-$button-size-sm := $el-height-sm
-$button-size-lg := $el-height-lg
-$button-size := $el-height
+$button-height-sm := $el-height-sm
+$button-height-lg := $el-height-lg
+$button-height := $el-height
 $button-padding-x := $el-padding-x
 
 .vi-button
   align-items: center
   border-radius: $border-radius
   display: inline-flex
-  height: $button-size
+  height: $button-height
   flex: 0 1 auto
   font-size: 14px
   font-weight: 400
@@ -26,15 +26,15 @@ $button-padding-x := $el-padding-x
   cursor pointer
   padding 0
   font-family 'Lato', sans-serif
-  // default
-  background none
-  color $grey
-  border 1px solid currentColor
+  color $font-color
+  background $bg-color
+  border 1px solid transparent
 
   &--active,
   &:hover,
   &:focus
-    color $dark-grey
+    color $brand
+    background $bg-color-3
 
   &--disabled
     background $disable-bg-color !important
@@ -61,10 +61,11 @@ $button-padding-x := $el-padding-x
 
   &--fill
     color white !important // TODO otherwise sometimes the text is black? (in cached multiple dropdown)
-    font-weight bold
+    box-shadow $box-shadow-2
 
     &:hover
       color white
+      box-shadow $box-shadow-3
 
     for color_name, color_value in $colors
 
@@ -78,35 +79,50 @@ $button-padding-x := $el-padding-x
           border-color lighten(color_value, 15%)
 
   &--outline
+    box-shadow: none
     background none
+    border-color $border-color
+    color $font-color
 
     &.vi-button--active,
     &:hover,
     &:focus
       color $brand
+      border-color currentColor
+      background none
+
+    &-secondary
+      color $font-color-1
+      border-color currentColor
+
+      &.vi-button--active,
+      &:hover,
+      &:focus
+        color $font-color-3
+        border-color currentColor
+
+    &-tertiary
+      color $font-color-1
+      border-color $border-color-1
+
+      &.vi-button--active,
+      &:hover,
+      &:focus
+        color $font-color-3
+        border-color currentColor
 
     for color_name, color_value in $colors
       &.vi-button--{color_name}
         color color_value
-        border-color currentColor
+        border-color color_value
 
-        if color_name == light-grey
-          &.vi-button--active,
-          &:hover
-            color $grey
-
-        else if color_name == 'grey'
-          &.vi-button--active,
-          &:hover
-            color $dark-grey
-
-        else
-          &.vi-button--active,
-          &:hover
-            background color_value
-            color white
+        &.vi-button--active,
+        &:hover
+          background color_value
+          color white
 
   &--text
+    box-shadow: none
     background none !important
     border-color transparent !important
     min-width 0
@@ -115,6 +131,12 @@ $button-padding-x := $el-padding-x
       padding-left 0
       padding-right 0
 
+    &-secondary
+      color $font-color-1
+
+      &:hover
+        color $font-color-3
+
     for color_name, color_value in $colors
       &.vi-button--{color_name}
         color color_value
@@ -122,44 +144,48 @@ $button-padding-x := $el-padding-x
         .vi-icon
           color inherit
 
-        if color_name == light-grey
-          &.vi-button--active,
-          &:hover
-            color $dark-grey
+        &.vi-button--active,
+        &:hover
+          color lighten(color_value, 30%)
 
-        else if color_name == 'grey'
-          &.vi-button--active,
-          &:hover
-            color $dark-grey
-
-        else
-          &.vi-button--active,
-          &:hover
-            color lighten(color_value, 25%)
-
-  // TODO: come back later (now just support default color)
   &--flat.vi-button
+    box-shadow: none
     background none
     border-color transparent
 
+    .vi-button__content:before
+      transition opacity $transition
+      content: ''
+      display block
+      position absolute
+      width inherit
+      height @width
+      background currentColor
+      opacity 0
+      border-radius inherit
+
     &:hover, &.vi-button--active
-      color $dark-grey
-      background rgba(0, 0, 0, 0.05)
+      .vi-button__content:before
+        opacity 0.15
+
+    for color_name, color_value in $colors
+      &.vi-button--{color_name}
+        color color_value
 
   &--small
-    height $button-size-sm
+    height $button-height-sm
     font-size 12px
 
     &.vi-button--icon
-      width: $button-size-sm
+      width: $button-height-sm
       height: @width
 
   &--large
-    height $button-size-lg
+    height $button-height-lg
     font-size 16px
 
     &.vi-button--icon
-      width: $button-size-lg
+      width: $button-height-lg
       height: @width
 
   &--round
@@ -171,20 +197,17 @@ $button-padding-x := $el-padding-x
   &--float
     box-shadow $shadow-2
 
-  &--raise
     &.vi-button--active,
     &:hover,
     &:focus
-      box-shadow $shadow-2
+      box-shadow $shadow-3
 
   &--icon
-    background: transparent
-    box-shadow: none !important
     border-radius: 50%
     justify-content: center
     min-width: 0
-    width: 40px
-    height: 40px
+    width: $button-height
+    height: @width
 
     .vi-button__content
       padding 0

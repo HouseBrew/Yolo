@@ -52,12 +52,12 @@ $input-dark-border-color-hover := $border-color-3
 
     .vi-input__prefix, .vi-input__suffix
       .vi-icon
-        color $font-color-2
+        color $font-color-3
 
   &--selected
     .vi-input__prefix, .vi-input__suffix
       .vi-icon
-        color $font-color-2
+        color $font-color-3
 
   &--clickable
     input
@@ -66,15 +66,15 @@ $input-dark-border-color-hover := $border-color-3
   &--disabled
     background $disable-bg-color !important
     border-color $border-color-2 !important
-    color $font-color-1 !important
+    color $font-color-0 !important
 
     input
-      color $font-color-1
+      color $font-color-0
       cursor no-drop
 
   &--readonly:not(.vi-input--clickable)
     border-color $border-color // TODO verify without !important // override hover color change
-    color $light-grey !important
+    color $font-color-1 !important
     box-shadow none !important
 
     &.vi-input--darker
@@ -101,7 +101,7 @@ $input-dark-border-color-hover := $border-color-3
     display inline-flex
 
     > .vi-icon
-      color $font-color-1
+      color $font-color-0
 
   &__prefix
     margin-right $input-padding-x
@@ -133,7 +133,7 @@ $input-dark-border-color-hover := $border-color-3
     flex 1
 
     &::placeholder
-      color: $font-color-1
+      color: $font-color-0
 
     &--textarea
       height inherit
