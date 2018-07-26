@@ -1,12 +1,5 @@
 @import '../../stylus/settings.styl'
 
-$breakpoints := {
-  xs: 0
-  sm: 600px
-  md: 800px
-  lg: 954px
-}
-
 .vi-spacer
   flex-grow: 1
 
@@ -21,7 +14,7 @@ $breakpoints := {
   margin 0 auto
   padding 30px 40px
 
-  @media(max-width: 800px)
+  @media(max-width: $screen-md)
     padding 30px 16px
 
 .vi-page-title

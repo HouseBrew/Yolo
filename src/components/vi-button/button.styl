@@ -1,7 +1,7 @@
 @import '../../stylus/settings.styl'
 
-$button-height-sm := $el-height-sm
-$button-height-lg := $el-height-lg
+$button-height-sm := $el-height-1
+$button-height-lg := $el-height-3
 $button-height := $el-height
 $button-padding-x := $el-padding-x
 
@@ -195,12 +195,12 @@ $button-padding-x := $el-padding-x
     text-transform none
 
   &--float
-    box-shadow $shadow-2
+    box-shadow $box-shadow-2
 
     &.vi-button--active,
     &:hover,
     &:focus
-      box-shadow $shadow-3
+      box-shadow $box-shadow-3
 
   &--icon
     border-radius: 50%

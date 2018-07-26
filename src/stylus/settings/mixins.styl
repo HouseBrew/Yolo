@@ -96,7 +96,7 @@ meta(font-size = 14px)
 
 /* container mixins */
 card(pad, radius = small)
-  border-radius radius == small ? $border-radius : $border-radius-lg
+  border-radius radius == small ? $border-radius : 10px
   border 1px solid $border-color
   background white
   if pad
