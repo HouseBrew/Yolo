@@ -4,6 +4,7 @@ $button-height-sm := $el-height-1
 $button-height-lg := $el-height-3
 $button-height := $el-height
 $button-padding-x := $el-padding-x
+$button-flat-hover-opacity := 0.15
 
 .vi-button
   align-items: center
@@ -63,6 +64,9 @@ $button-padding-x := $el-padding-x
     color white !important // TODO otherwise sometimes the text is black? (in cached multiple dropdown)
     box-shadow $box-shadow-2
 
+    .vi-icon
+      color inherit
+
     &:hover
       color white
       box-shadow $box-shadow-3
@@ -84,7 +88,6 @@ $button-padding-x := $el-padding-x
     border-color $border-color
     color $font-color
 
-    &.vi-button--active,
     &:hover,
     &:focus
       color $brand
@@ -92,10 +95,9 @@ $button-padding-x := $el-padding-x
       background none
 
     &-secondary
-      color $font-color-1
+      color $font-color-2
       border-color currentColor
 
-      &.vi-button--active,
       &:hover,
       &:focus
         color $font-color-3
@@ -103,9 +105,8 @@ $button-padding-x := $el-padding-x
 
     &-tertiary
       color $font-color-1
-      border-color $border-color-1
+      border-color currentColor
 
-      &.vi-button--active,
       &:hover,
       &:focus
         color $font-color-3
@@ -131,6 +132,12 @@ $button-padding-x := $el-padding-x
       padding-left 0
       padding-right 0
 
+    .vi-icon
+      color inherit
+
+    &:hover
+      color $brand
+
     &-secondary
       color $font-color-1
 
@@ -140,9 +147,6 @@ $button-padding-x := $el-padding-x
     for color_name, color_value in $colors
       &.vi-button--{color_name}
         color color_value
-
-        .vi-icon
-          color inherit
 
         &.vi-button--active,
         &:hover
@@ -160,13 +164,20 @@ $button-padding-x := $el-padding-x
       position absolute
       width inherit
       height @width
+      left 0
+      right 0
+      top 0
+      bottom 0
       background currentColor
       opacity 0
       border-radius inherit
 
-    &:hover, &.vi-button--active
+    &:hover,
+    &.vi-button--active
+      color $font-color
+
       .vi-button__content:before
-        opacity 0.15
+        opacity $button-flat-hover-opacity
 
     for color_name, color_value in $colors
       &.vi-button--{color_name}
