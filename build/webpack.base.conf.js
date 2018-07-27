@@ -9,7 +9,6 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    docs: './src/_doc/doc.js',
     ['yolo']: './src/lib.js'
   },
   output: {

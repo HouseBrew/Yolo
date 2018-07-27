@@ -123,10 +123,11 @@ $button-flat-hover-opacity := 0.15
           color white
 
   &--text
-    box-shadow: none
+    box-shadow none
     background none !important
     border-color transparent !important
     min-width 0
+    color $font-color-2
 
     .vi-button__content
       padding-left 0
@@ -139,6 +140,12 @@ $button-flat-hover-opacity := 0.15
       color $brand
 
     &-secondary
+      color $font-color-2
+
+      &:hover
+        color $font-color-4
+
+    &-tertiary
       color $font-color-1
 
       &:hover
